@@ -22,22 +22,19 @@ except:
 
 
 def extract_in_tweets(df, file_, words_list):
-    df_no_code = df.loc[(df['lang']=='en') & df['country_code'].isnull()]['text']
-    #df_no_code = df_in.loc[df['country_code'].isnull()]["text"]
-    df_no_code = df_no_code.apply(lambda x: re.sub(r"https\S+", "", str(x)))    #removing links
-    df_no_code = df_no_code.apply(lambda x: x.lower())     #convert to lowercase
-    in_tweets_found = []
+    df_no_code = df.loc[(df['lang']=='en') & df['country_code'].isnull()][['user_id', 'created_at', 'screen_name', 'account_lang','text']]
+    in_tweets_found = pd.DataFrame(columns = ['user_id', 'created_at', 'screen_name', 'text'])
+    print(df_no_code.head())
     
     for i in df_no_code.index:
-        tweet = df_no_code[i].split()
+        tweet = df_no_code['text'][i].split()
         for word in words_list:
             if word in tweet:
                 #print(tweet)
-                in_tweets_found.append(df_no_code[i])
+                in_tweets_found = in_tweets_found.append(df_no_code.loc[[i]])
                 continue
     
-    df_in_tweets = pd.DataFrame(in_tweets_found, columns = ['text'])
-    df_in_tweets.to_csv(output_folder + file_ + '.csv', index = False)
+    in_tweets_found.to_csv(output_folder + file_ + '.csv', index = False)
     print(file_ + '.csv')
 
 for file_ in onlyfiles:
