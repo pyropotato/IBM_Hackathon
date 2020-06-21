@@ -22,8 +22,8 @@ except:
 
 
 def extract_in_tweets(df, file_, words_list):
-    df_no_code = df.loc[(df['lang']=='en') & df['country_code'].isnull()][['user_id', 'created_at', 'screen_name', 'text']]
-    in_tweets_found = pd.DataFrame(columns = ['user_id', 'created_at', 'screen_name', 'text'])
+    df_no_code = df.loc[(df['lang'] == 'en') & (df['country_code'].isnull())][['user_id', 'created_at', 'screen_name','text', 'retweet_count', 'followers_count', 'favourites_count','verified']]
+    in_tweets_found = df.loc[(df['country_code'] == 'IN') & (df['lang'] == 'en')][['user_id', 'created_at', 'screen_name','text', 'retweet_count', 'followers_count', 'favourites_count','verified']]
     print(df_no_code.head())
     
     for i in df_no_code.index:
