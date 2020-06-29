@@ -1,0 +1,69 @@
+
+.wrapper{
+    overflow-x: hidden;
+}
+
+.lineCharts{
+    position: relative;
+    margin: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 5%; 
+}
+
+#lineChart1a{
+    position: relative;
+    width: 48% !important;
+    margin: 1%;   
+}
+
+#lineChart1b{
+    position: relative;
+    width: 48% !important;
+    margin:  1%; 
+}
+
+.negativeReasons1{
+    position: relative;
+    /*padding: 5%;*/
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.pieChart1a{
+    position: relative;
+    width: 31.3% !important;
+    margin:  1%; 
+}
+
+.negativeReasons2{
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 5%; 
+}
+.pieChart1b{
+    position: relative;
+    width: 31.3% !important;
+    margin: 1%;
+    margin-left: 17.7%;
+}
+.pieChart1c{
+    position: relative;
+    width: 31.3% !important;
+    margin: 1%;
+    margin-right: 17.7%;
+}
+
+.threeCategoryAnalysis1{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.btn-group{
+    padding-left: 2%; 
+}
+
+#dateForm{
+    margin-right:2%;
+}
