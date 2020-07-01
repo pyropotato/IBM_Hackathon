@@ -1,0 +1,30 @@
+
+.map-container{
+
+	height: 300vh;
+}
+
+/*.jvmap-smart{
+    width: 100%; 
+    height: 100%;  
+}
+@media only screen and (min-width: 576px) {
+    .map-container{
+        height: 1000px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .map-container{
+        height: 400px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .map-container{
+        height: 500px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .map-container{
+        height: 1000px;
+    }
+}*/
