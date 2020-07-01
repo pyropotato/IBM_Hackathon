@@ -19,14 +19,16 @@ data={
 app= Flask(__name__)
 
 @app.route('/india')
-def home():
+def india():
 	return render_template('india.html')
 
 @app.route('/indiaData')
-def home1():
+def indiaData():
 	print('get request')
 	return data
-
+@app.route('/world')
+def world():
+	return render_template('world.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)
