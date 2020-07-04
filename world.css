@@ -1,30 +1,51 @@
-
-.map-container{
-
-	height: 300vh;
+.wrapper{
+    overflow-x: hidden;
 }
 
-/*.jvmap-smart{
-    width: 100%; 
-    height: 100%;  
+#world-map{
+	/*margin-top: 1%;*/
+	width: 100%;
+	height: 28rem;
+	/*margin-bottom: 5%;*/
 }
-@media only screen and (min-width: 576px) {
-    .map-container{
-        height: 1000px;
-    }
+
+#Slider{
+	margin-bottom: 5%;
+	width: 100%;
 }
-@media only screen and (min-width: 768px) {
-    .map-container{
-        height: 400px;
-    }
+
+.negativeReasons1{
+    position: relative;
+    /*padding: 5%;*/
+    padding-left: 2%;
+    padding-right: 2%;
 }
-@media only screen and (min-width: 992px) {
-    .map-container{
-        height: 500px;
-    }
+
+.pieChart1a{
+    position: relative;
+    width: 31.3% !important;
+    margin:  1%; 
 }
-@media only screen and (min-width: 1200px) {
-    .map-container{
-        height: 1000px;
-    }
-}*/
+
+.negativeReasons2{
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 5%; 
+}
+.pieChart1b{
+    position: relative;
+    width: 31.3% !important;
+    margin: 1%;
+    margin-left: 17.7%;
+}
+
+.pieChart1c{
+    position: relative;
+    width: 31.3% !important;
+    margin: 1%;
+    margin-right: 17.7%;
+}
+.china-heading{
+	margin-bottom: 2%;
+}
