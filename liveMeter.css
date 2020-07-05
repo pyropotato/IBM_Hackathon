@@ -1,0 +1,22 @@
+.wrapper{
+	overflow-x: hidden;
+}
+
+.lineCharts{
+    position: relative;
+    margin: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#lineChart1a{
+    position: relative;
+    width: 48% !important;
+    margin: 1%;   
+}
+
+#lineChart1b{
+    position: relative;
+    width: 48% !important;
+    margin:  1%; 
+}
