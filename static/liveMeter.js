@@ -35,7 +35,17 @@ const createChart = function(){
 		                    // 'junior-dev' will be returned instead and displayed on your chart
 		                }
 		            }
-		        }]
+	    //             "scaleLabel": {
+					//     "display": true,
+					//     "labelString": 'Category of Tweet'
+					// }
+		        }],
+				"xAxes":[{
+					"scaleLabel": {
+					    "display": true,
+					    "labelString": 'Last 10 tweets'
+					}
+				}]
 		    }
 		}
 	});
@@ -59,7 +69,18 @@ const createChart = function(){
 				"scales":{
 					"yAxes":[{
 						"ticks":{
-							"beginAtZero":true
+							"beginAtZero":true,
+							"stepSize": 1
+						},
+						"scaleLabel": {
+						    "display": true,
+						    "labelString": 'Count'
+						}
+					}],
+					"xAxes":[{
+						"scaleLabel": {
+						    "display": true,
+						    "labelString": 'Category of Tweet'
 						}
 					}]
 				}

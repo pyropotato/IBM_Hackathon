@@ -56,9 +56,8 @@ const createMap= function(){
   });
 }
 
-
 const chinaPerception = function(data){
-  console.log(data)
+  // console.log(data)
   var weeks = Object.keys(data)
   var i;
 
@@ -77,11 +76,25 @@ const chinaPerception = function(data){
       "labels":keys,
       "datasets":[{
         "data":dataset,
-        "backgroundColor":["#ff6961","#7EC8E3","#77dd77","rgb(201, 203, 207)"]}
+        "backgroundColor":["#ff6961","#7EC8E3","#77dd77","rgb(201, 203, 207)"]} //red,blue, green
       ]}
     })
   }
 }
+
+// const initiateChart = function(data){
+//   var date='2020-03-29'
+//   initializeDataForMap(data.world_sentiments,date)
+//   createMap()
+//   chinaPerception(data.china)
+  
+//   var sliderObj = document.getElementById("Slider")
+//   sliderObj.max=maxDate
+//   sliderObj.min=minDate
+//   sliderObj.step=86400
+//   globalData=data.world_sentiments
+//   rangeBullet.innerHTML = temp1;
+// }
 
 const initiateChart = function(data){
   var date='2020-03-29'
@@ -102,14 +115,11 @@ const initiateChart = function(data){
   rangeBullet.innerHTML = temp1;
 
 }
-
-
 $('#positiveTweetButton').on('click',function(){
   choice=2
   var mapObject = $('#world-map').vectorMap('get', 'mapObject');
   mapObject.series.regions[0].setValues(dataset[choice]);
   mapObject.series.regions[0].setScale(scale[choice]);
-  var slider_thumb = document.getElementById("rs-bullet");
   // console.log(positive)
 })
 $('#neutralTweetButton').on('click',function(){
@@ -126,6 +136,14 @@ $('#negativeTweetButton').on('click',function(){
   mapObject.series.regions[0].setScale(scale[choice]);
 })
 
+// var slider = document.getElementById("Slider");
+// slider.oninput=function(){
+//   let temp=new Date(this.value*1000)
+//   let temp1=temp.toISOString().substring(0,10)
+//   // console.log(temp1)
+//   updateDataforMap(temp1)
+// }
+
 var rangeSlider = document.getElementById("Slider");
 var rangeBullet = document.getElementById("rs-bullet");
 
@@ -137,14 +155,6 @@ slider.oninput=function(){
   rangeBullet.innerHTML = temp1;
   updateDataforMap(temp1)
 }
-
-
-//rangeSlider.addEventListener("input", showSliderValue, false);
-
-//function showSliderValue() {
-//  var bulletPosition = ((rangeSlider.value - rangeSlider.min) /(rangeSlider.max - rangeSlider.min));
-//  rangeBullet.style.left = (bulletPosition*100) + "%";
-//}
 
 const loadData = function(){
   $.ajax({
