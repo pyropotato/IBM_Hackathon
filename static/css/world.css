@@ -2,17 +2,21 @@
     overflow-x: hidden;
 }
 
-#main_topic{
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
 #world-map{
 	/*margin-top: 1%;*/
 	width: 100%;
 	height: 28rem;
 	/*margin-bottom: 5%;*/
 }
+#topJumbotron{
+    padding: 1.5rem 2rem;
+}
+/*#Slider{
+	margin-bottom: 5%;
+	width: 100%;
+}
+*/
+
 
 .slideContainer {
     margin-top: 0%;
@@ -57,14 +61,14 @@
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 20px;
+    font-size: 15px;
     
 }
 
 .slider {
     -webkit-appearance: none;
     width: 100%;
-    height: 10px;
+    height: 8px;
     border-radius: 5px;
     background: #d3d3d3;
     outline: none;
@@ -76,8 +80,8 @@
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: rgb(238, 13, 13);
     cursor: pointer;
@@ -98,13 +102,9 @@
     padding-right: 2%;
 }
 
-#jumbo_china{
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-bottom: 1%;
-    
+#sectionHeading{
+    padding-top: 2%;
 }
-
 .negativeReasons1{
     position: relative;
     /*padding: 5%;*/
@@ -122,7 +122,7 @@
     position: relative;
     padding-left: 2%;
     padding-right: 2%;
-    margin-bottom: 5%; 
+    margin-bottom: 1%; 
 }
 .pieChart1b{
     position: relative;

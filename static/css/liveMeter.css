@@ -1,15 +1,15 @@
+
 .wrapper{
 	overflow-x: hidden;
 }
 
-#main_topic{
-    padding-top: 1%;
-    padding-bottom: 1%;
+#topJumbotron{
+	padding: 1.5rem 2rem
 }
-
 .lineCharts{
     position: relative;
     margin: 1%;
+    margin-top: 3%;
     padding-left: 2%;
     padding-right: 2%;
 }
