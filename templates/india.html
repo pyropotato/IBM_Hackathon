@@ -35,16 +35,16 @@
                     </a> 
                 </li> 
                 <li class="nav-item"> 
-                  <a class="nav-link" href="/"> 
+                  <a class="nav-link" href="/home"> 
                     Home
                   </a> 
                 </li> 
             </ul> 
           </nav>
 	   
-		<div class="jumbotron text-center" id="main_topic">
-			<h1 class="display-4">India Sentiment Analysis</h1>
-		</div>
+	    <div class="jumbotron text-center" id='topJumbotron'>
+	    	<h1 class="display-4">Indian Tweets Sentiment Analysis</h1>
+	    </div>
 
 		<div class= "lineCharts row">
 			<div  class="card shadow text-center" id='lineChart1a'>
@@ -72,10 +72,7 @@
 			</div>
 	    </div> 
 
-		<div class="jumbotron text-center" id='jumbo_reasons'>
-			<h5 class="display-4">Reasons for Negative Tweets</h5>
-		</div> 
-	   	
+	   	<h3 class="card-title text-center" id = "sectionHeading">Reasons for Negative Tweets</h3>
 	    <div class="negativeReasons1 row">
 			<div class="card shadow pieChart1a text-center">
     			<div class="card-body">
@@ -112,6 +109,7 @@
     		</div>
 	    </div>
 		
+		<h3 class="card-title text-center" id = "sectionHeading">Other Analysis</h3>
 		<div class="threeCategoryAnalysis">
 			
 			<div class="btn-group" role="group" aria-label="Basic example">
@@ -155,8 +153,7 @@
 	    		</div>
 		    </div>
 		</div>
-		<footer class=" text-white  bg-dark">
-		</footer>
+		<div id="snackbar"></div>
 	</div>
 	 
 	<!-- <script type="text/javascript" src="india.js"></script> -->
