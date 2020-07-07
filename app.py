@@ -71,5 +71,9 @@ def getLiveTweet():
 	print(dat)
 	return {'data':dat}	
 
+@app.route('/home')
+def getHome():
+	return render_template('home.html')
+
 if __name__ == '__main__':
 	app.run(threaded = True, debug=True)
