@@ -1,0 +1,70 @@
+.carousel_container{
+    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%; 
+    padding-bottom: 5%;
+    width: 1000px;
+
+}
+
+.carousel-item{
+    height: 400px;
+}
+
+#jumbo_about_us{
+    background-color: white;
+    padding-bottom: 2%;
+    margin-bottom: 0%;
+}
+
+#service_cards{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.textWithBlurredBg{
+    
+    height:auto;
+    display:inline-block;
+    position:relative;
+    transition:.3s;
+    margin:10px;
+  }
+  
+.textWithBlurredBg img{
+    width:100%;
+    height:100%;
+    transition:.3s;
+    border-radius:4px;
+  }
+  
+.textWithBlurredBg:hover img{
+    filter:blur(2px) brightness(60%);
+    box-shadow:0 0 16px grey;
+  }
+   
+.textWithBlurredBg :not(img){
+    position:absolute;
+    z-index:1;
+    top:30%;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+  }
+    
+.textWithBlurredBg:hover :not(img){
+    opacity:1;
+  }
+
+.about_us{
+    position: relative;
+}
+
+#about_us_card{
+    position: relative;
+    display: inline-block;
+    width: 25% !important;
+    margin:  4% !important; 
+}

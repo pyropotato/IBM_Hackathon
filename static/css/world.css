@@ -2,6 +2,11 @@
     overflow-x: hidden;
 }
 
+#main_topic{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
 #world-map{
 	/*margin-top: 1%;*/
 	width: 100%;
@@ -9,9 +14,95 @@
 	/*margin-bottom: 5%;*/
 }
 
-#Slider{
-	margin-bottom: 5%;
-	width: 100%;
+.slideContainer {
+    margin-top: 0%;
+    margin-bottom: 3%;
+    margin-right: 3%;
+    margin-left: 3%;
+    display:inline-block;
+    flex-direction: column;
+    width: 80%
+    
+}
+
+.range-slider {
+    width: 100%;
+    
+}
+
+.date_counter{
+    margin-left: 1%;
+    display: inline-block;
+}
+
+.rs-label {
+    transform-origin: center center;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 5%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    border: 2px solid rgb(87, 85, 85);
+    margin-top: 10px;
+    left: attr(value);
+    color: rgb(126, 126, 126);
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(238, 13, 13);
+    cursor: pointer;
+}
+
+.date_display {
+    width: 8%;
+    height: 2%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 10px;
+}
+
+#date_border{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#jumbo_china{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+    
 }
 
 .negativeReasons1{

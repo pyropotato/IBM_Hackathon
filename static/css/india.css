@@ -3,6 +3,11 @@
     overflow-x: hidden;
 }
 
+#main_topic{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
 .lineCharts{
     position: relative;
     margin: 1%;
@@ -21,6 +26,12 @@
     position: relative;
     width: 48% !important;
     margin:  1%; 
+}
+
+#jumbo_reasons{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
 }
 
 .negativeReasons1{
