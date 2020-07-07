@@ -12,27 +12,37 @@
 </head>
 <body>
 	<div class="wrapper">
-		<nav class="navbar navbar-expand-sm navbar-light bg-light"> 
-			<a class="navbar-brand" href="#">
-			<img src="static/liveMeter.jpg" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-		    Live Meter
-			</a>
-			<ul class="navbar-nav ml-auto"> 
-			    <li class="nav-item"> 
-			        <a class="nav-link" href="/india"> 
-			          India
-			        </a> 
-			    </li> 
-			    <li class="nav-item"> 
-			        <a class="nav-link" href="/world"> 
-			          World
-			        </a> 
-			    </li> 
-			</ul> 
-		</nav>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark"> 
+            <a class="navbar-brand" href="#">
+            <img src="static/home.png" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+              Live
+            </a>
+            <ul class="navbar-nav ml-auto"> 
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/india"> 
+                    India
+                  </a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/world"> 
+                    World
+                    </a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/liveMeter"> 
+                    Live
+                    </a> 
+                </li> 
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/"> 
+                    Home
+                  </a> 
+                </li> 
+            </ul> 
+          </nav>
 
-		<div class="jumbotron text-center">
-			<h1 class="display-4">Covid-19 Tweets Sentiment Analysis</h1>
+		<div class="jumbotron text-center" id='main_topic'>
+			<h1 class="display-4">Live Sentiment Analysis</h1>
 		</div>
 
 		<div class= "lineCharts row">
@@ -46,7 +56,7 @@
 			
 			<div class=" card shadow" id='lineChart1b'>
 				<div class="card-body text-center">
-					<h5 class="card-title">Live Twitter Data (Cummulative)"</h5>
+					<h5 class="card-title">Live Twitter Data (Cummulative)</h5>
 					<canvas id='lineChart2'></canvas> 
 				</div>
 			</div>

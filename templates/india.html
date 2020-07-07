@@ -13,28 +13,38 @@
 
 <body>
 	<div class="wrapper">
-		<nav class="navbar navbar-expand-sm navbar-light bg-light"> 
-		  	<a class="navbar-brand" href="#">
-				<img src="static/indiaFlag.jpg" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-			    India
-			</a>
-			<ul class="navbar-nav ml-auto"> 
-	            <li class="nav-item"> 
-	                <a class="nav-link" href="/world"> 
-	                  World
-	                </a> 
-	            </li> 
-	            <li class="nav-item"> 
-	                <a class="nav-link" href="#"> 
-	                  Home
-	                </a> 
-	            </li> 
-	        </ul> 
-		</nav>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark"> 
+            <a class="navbar-brand" href="#">
+            <img src="static/indiaFlag.jpg" width="40" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+              India
+            </a>
+            <ul class="navbar-nav ml-auto"> 
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/india"> 
+                    India
+                  </a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/world"> 
+                    World
+                    </a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/liveMeter"> 
+                    Live
+                    </a> 
+                </li> 
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/"> 
+                    Home
+                  </a> 
+                </li> 
+            </ul> 
+          </nav>
 	   
-	    <div class="jumbotron text-center">
-	    	<h1 class="display-4">Covid-19 Tweets Sentiment Analysis</h1>
-	    </div>
+		<div class="jumbotron text-center" id="main_topic">
+			<h1 class="display-4">India Sentiment Analysis</h1>
+		</div>
 
 		<div class= "lineCharts row">
 			<div  class="card shadow text-center" id='lineChart1a'>
@@ -62,7 +72,10 @@
 			</div>
 	    </div> 
 
-	   	<h5 class="card-title text-center">Reasons for Negative Tweets</h5>
+		<div class="jumbotron text-center" id='jumbo_reasons'>
+			<h5 class="display-4">Reasons for Negative Tweets</h5>
+		</div> 
+	   	
 	    <div class="negativeReasons1 row">
 			<div class="card shadow pieChart1a text-center">
     			<div class="card-body">
@@ -142,6 +155,8 @@
 	    		</div>
 		    </div>
 		</div>
+		<footer class=" text-white  bg-dark">
+		</footer>
 	</div>
 	 
 	<!-- <script type="text/javascript" src="india.js"></script> -->
