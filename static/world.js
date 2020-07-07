@@ -56,6 +56,7 @@ const createMap= function(){
   });
 }
 
+
 const chinaPerception = function(data){
   console.log(data)
   var weeks = Object.keys(data)
@@ -87,19 +88,28 @@ const initiateChart = function(data){
   initializeDataForMap(data.world_sentiments,date)
   createMap()
   chinaPerception(data.china)
-  
+  var rangeBullet = document.getElementById("rs-bullet");
   var sliderObj = document.getElementById("Slider")
   sliderObj.max=maxDate
   sliderObj.min=minDate
   sliderObj.step=86400
   globalData=data.world_sentiments
+  console.log(maxDate)
+  console.log(minDate)
+  let temp=new Date(minDate*1000)
+  let temp1=temp.toISOString().substring(0,10)
+  console.log(temp1)
+  rangeBullet.innerHTML = temp1;
+
 }
+
 
 $('#positiveTweetButton').on('click',function(){
   choice=2
   var mapObject = $('#world-map').vectorMap('get', 'mapObject');
   mapObject.series.regions[0].setValues(dataset[choice]);
   mapObject.series.regions[0].setScale(scale[choice]);
+  var slider_thumb = document.getElementById("rs-bullet");
   // console.log(positive)
 })
 $('#neutralTweetButton').on('click',function(){
@@ -116,13 +126,25 @@ $('#negativeTweetButton').on('click',function(){
   mapObject.series.regions[0].setScale(scale[choice]);
 })
 
+var rangeSlider = document.getElementById("Slider");
+var rangeBullet = document.getElementById("rs-bullet");
+
 var slider = document.getElementById("Slider");
 slider.oninput=function(){
   let temp=new Date(this.value*1000)
   let temp1=temp.toISOString().substring(0,10)
   console.log(temp1)
+  rangeBullet.innerHTML = temp1;
   updateDataforMap(temp1)
 }
+
+
+//rangeSlider.addEventListener("input", showSliderValue, false);
+
+//function showSliderValue() {
+//  var bulletPosition = ((rangeSlider.value - rangeSlider.min) /(rangeSlider.max - rangeSlider.min));
+//  rangeBullet.style.left = (bulletPosition*100) + "%";
+//}
 
 const loadData = function(){
   $.ajax({

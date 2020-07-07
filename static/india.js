@@ -22,7 +22,7 @@ const make3catGraphs = function(data,category){
 			"labels":keys,
 			"datasets":[{
 				"data":dataset,
-				"backgroundColor":["#CC0000","#0000CC","#00CC00","rgb(201, 203, 207)"]}
+				"backgroundColor":["rgb(255, 0, 0)","rgb(0, 0, 192)","rgb(0, 255, 0)","rgb(201, 203, 207)"]}
 			]}
 		})
 		threeCatGraphObjects.push(tempChart)
@@ -51,7 +51,7 @@ const update3catGraphs = function(data,category){
 			"labels":keys,
 			"datasets":[{
 				"data":dataset,
-				"backgroundColor":["#CC0000","#0000CC","#00CC00","rgb(201, 203, 207)"]}
+				"backgroundColor":["rgb(255, 0, 0)","rgb(0, 0, 192)","rgb(0, 255, 0)","rgb(201, 203, 207)"]}
 			]}
 		})
 		threeCatGraphObjects[i]= tempChart
@@ -79,11 +79,11 @@ const makeNegativeReasonsGroph = function(data){
 			"labels":keys,
 			"datasets":[{
 				"data":dataset,
-				"backgroundColor":["#FF9999","#FF3333","#CC0000","#660000","#C0C0C0","#808080","#404040"]}
+				"backgroundColor":["rgb(255, 0, 0)","rgb(0, 0, 192)","rgb(0, 255, 0)","rgb(1, 55, 192)","rgb(102, 0, 102)","rgb(192, 255, 0)","rgb(0, 255, 192)"]}
 			]}
 		})
 	} 
-
+	
 }
 
 const makeMonthGraph = function(monthdata){
@@ -106,21 +106,21 @@ const makeMonthGraph = function(monthdata){
 			"label":"Positive Values",
 			"data":pos,
 			"fill":false,
-			"borderColor":"#00CC00",
+			"borderColor":"rgb(0, 255, 0)",
 			"lineTension":0.1
 		},
 		{
 			"label":"Negative Values",
 			"data":neg,
 			"fill":false,
-			"borderColor":"#CC0000",
+			"borderColor":"rgb(255, 0, 0)",
 			"lineTension":0.1
 		},
 		{
 			"label":"Neutral Values",
 			"data":neu,
 			"fill":false,
-			"borderColor":"#0000CC",
+			"borderColor":"blue",
 			"lineTension":0.1
 		}]},
 		"options":{}
@@ -148,27 +148,26 @@ const makeDayGraph = function(daysData,date){
 			"label":"Positive Values",
 			"data":pos,
 			"fill":false,
-			"borderColor":"#00CC00",
+			"borderColor":"rgb(0, 255, 0)",
 			"lineTension":0.1
 		},
 		{
 			"label":"Negative Values",
 			"data":neg,
 			"fill":false,
-			"borderColor":"#CC0000",
+			"borderColor":"rgb(255, 0, 0)",
 			"lineTension":0.1
 		},
 		{
 			"label":"Neutral Values",
 			"data":neu,
 			"fill":false,
-			"borderColor":"#0000CC",
+			"borderColor":"blue",
 			"lineTension":0.1
 		}]},
 		"options":{}
 	})
 }
-
 const updateDayGraph = function(daysData,date){
 	var dayData=daysData[date]
 	var hours=['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23']
@@ -190,28 +189,28 @@ const updateDayGraph = function(daysData,date){
 			"label":"Positive Values",
 			"data":pos,
 			"fill":false,
-			"borderColor":"#00CC00",
+			"borderColor":"rgb(0, 255, 0)",
 			"lineTension":0.1
 		},
 		{
 			"label":"Negative Values",
 			"data":neg,
 			"fill":false,
-			"borderColor":"#CC0000",
+			"borderColor":"rgb(255, 0, 0)",
 			"lineTension":0.1
 		},
 		{
 			"label":"Neutral Values",
 			"data":neu,
 			"fill":false,
-			"borderColor":"#0000CC",
+			"borderColor":"blue",
 			"lineTension":0.1
 		}]},
 		"options":{}
 	})
 }
 
-const initiateChart = function(data){
+const initiateChart=function(data){
 	var date = '2020-03-29'
 	var category = 'mostViralAccounts'
 	globalData=data
@@ -243,7 +242,7 @@ $('#dateSubmit').on('click',function(){
 
 })
 
-const loadData = function(res){
+const loadData=function(res){
 	$.ajax({
 		url: '/indiaData',
 		method: "GET",
@@ -252,6 +251,7 @@ const loadData = function(res){
 }
 
 $(function() {
+	console.log('hi')
 	loadData()
 })
 
