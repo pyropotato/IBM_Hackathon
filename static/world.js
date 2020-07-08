@@ -115,11 +115,16 @@ const initiateChart = function(data){
   rangeBullet.innerHTML = temp1;
 
 }
+
+let s = document.createElement("style");
+document.head.appendChild(s);
+
 $('#positiveTweetButton').on('click',function(){
   choice=2
   var mapObject = $('#world-map').vectorMap('get', 'mapObject');
   mapObject.series.regions[0].setValues(dataset[choice]);
   mapObject.series.regions[0].setScale(scale[choice]);
+  s.textContent = `.slider::-webkit-slider-thumb{background-color: rgb(0, 255, 0)}`
   // console.log(positive)
 })
 $('#neutralTweetButton').on('click',function(){
@@ -127,6 +132,7 @@ $('#neutralTweetButton').on('click',function(){
   var mapObject = $('#world-map').vectorMap('get', 'mapObject');
   mapObject.series.regions[0].setValues(dataset[choice]);
   mapObject.series.regions[0].setScale(scale[choice]);
+  s.textContent = `.slider::-webkit-slider-thumb{background-color: rgb(0, 0, 255)}`
   // console.log(neutral)
 })
 $('#negativeTweetButton').on('click',function(){
@@ -134,6 +140,7 @@ $('#negativeTweetButton').on('click',function(){
   var mapObject = $('#world-map').vectorMap('get', 'mapObject');
   mapObject.series.regions[0].setValues(dataset[choice]);
   mapObject.series.regions[0].setScale(scale[choice]);
+  s.textContent = `.slider::-webkit-slider-thumb{background-color: rgb(255, 0, 0)}`
 })
 
 // var slider = document.getElementById("Slider");
