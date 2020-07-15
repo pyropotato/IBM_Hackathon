@@ -9,7 +9,7 @@
 .lineCharts{
     position: relative;
     margin: 1%;
-    margin-top: 3%;
+    margin-top: 5%;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -24,4 +24,20 @@
     position: relative;
     width: 48% !important;
     margin:  1%; 
+}
+
+#table{
+    position: relative;
+    width: 96%;
+    /*left: 2%;*/
+    margin: 2% !important;
+    max-height:600px;
+    padding: 10px;
+    /*max-height: 1000px;*/
+}
+
+#sectionHeading{
+    padding:1%;
+    margin: 2%;
+    margin-top: 5%;
 }
