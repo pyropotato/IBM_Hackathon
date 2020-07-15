@@ -23,9 +23,9 @@ from nltk.sentiment.util import *
 
 
 # sklearn imports
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB
-from sklearn import metrics
+#from sklearn.model_selection import train_test_split
+#from sklearn.naive_bayes import MultinomialNB
+#from sklearn import metrics
 
 
 # python imports
@@ -37,12 +37,12 @@ import datetime as dt
 
 
 # Visualization
-from matplotlib import pyplot as plt
-from matplotlib import ticker,dates
-import seaborn as sns
-from sklearn import feature_extraction, linear_model, model_selection, preprocessing
+#from matplotlib import pyplot as plt
+#from matplotlib import ticker,dates
+#import seaborn as sns
+#from sklearn import feature_extraction, linear_model, model_selection, preprocessing
 # from wordcloud import WordCloud
-from tqdm import tqdm_notebook
+#from tqdm import tqdm_notebook
 
 
 # Saving models
@@ -109,9 +109,11 @@ def driver(tweets):
     # print(senti)
     senti_ls = senti['value'].tolist()
     tweet_id = senti['id'].tolist()
+    tweets_text = senti['text'].tolist()
+    #print(senti['text'].tolist())
     senti_dict = {}
     for x in range(len(tweet_id)):
-        senti_dict[tweet_id[x]] = senti_ls[x]
+        senti_dict[tweet_id[x]] = {'value':senti_ls[x], 'text':tweets_text[x]}
     # print('\n\n')
     print(senti_dict)
     end = time.time()
