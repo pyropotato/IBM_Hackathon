@@ -35,17 +35,7 @@ const createChart = function(){
 		                    // 'junior-dev' will be returned instead and displayed on your chart
 		                }
 		            }
-	    //             "scaleLabel": {
-					//     "display": true,
-					//     "labelString": 'Category of Tweet'
-					// }
-		        }],
-				"xAxes":[{
-					"scaleLabel": {
-					    "display": true,
-					    "labelString": 'Last 10 tweets'
-					}
-				}]
+		        }]
 		    }
 		}
 	});
@@ -69,18 +59,7 @@ const createChart = function(){
 				"scales":{
 					"yAxes":[{
 						"ticks":{
-							"beginAtZero":true,
-							"stepSize": 1
-						},
-						"scaleLabel": {
-						    "display": true,
-						    "labelString": 'Count'
-						}
-					}],
-					"xAxes":[{
-						"scaleLabel": {
-						    "display": true,
-						    "labelString": 'Category of Tweet'
+							"beginAtZero":true
 						}
 					}]
 				}
@@ -95,6 +74,7 @@ const loadTweet = function(){
 		url : '/liveTweetData',
 		method: "GET",
 		success: function(data){
+			console.log(data)
 			var id=Object.keys(data['data'])[0]
 			// console.log('id',id)
 			// console.log('lasttweet',lastTweet)
@@ -106,12 +86,12 @@ const loadTweet = function(){
 				console.log("new tweet")
 				lineGraphData.shift()
 
-				if(data['data'][id]=='positive'){
+				if(data['data'][id]['value']=='positive'){
 	    			lineGraphData.push(1)
 	    			barGraphData[0]+=1
 	    			lineColor="#77dd77"
 	    		}
-	    		else if(data['data'][id]=='negative'){
+	    		else if(data['data'][id]['value']=='negative'){
 	    			lineGraphData.push(-1)
 	    			barGraphData[2]+=1
 	    			lineColor="#ff6961"
@@ -147,12 +127,12 @@ const loadData = function(){
     	var ids=Object.keys(data['data'])
     	// console.log(ids)
     	for(var i =0; i<ids.length;i++){
-    		if(data['data'][ids[i]]=='positive'){
+    		if(data['data'][ids[i]]['value']=='positive'){
     			lineGraphData.push(1)
     			barGraphData[0]+=1
     			lineColor="#77dd77"
     		}
-    		else if(data['data'][ids[i]]=='negative'){
+    		else if(data['data'][ids[i]]['value']=='negative'){
     			lineGraphData.push(-1)
     			barGraphData[2]+=1
     			lineColor="#ff6961"
